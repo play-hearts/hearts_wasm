@@ -1,5 +1,5 @@
 {
-  "name": "hearts_wasm",
+  "name": "@playhearts/hearts_wasm",
   "version": "1.0.0",
   "description": "An API for the card game hearts",
   "main": "hearts_wasm.js",
