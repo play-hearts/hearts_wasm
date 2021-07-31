@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/play-hearts/hearts_wasm/issues"
   },
-  "homepage": "https://github.com/play-hearts/hearts_wasm#readme"
+  "homepage": "https://github.com/play-hearts/hearts_wasm#readme",
+  "devDependencies": {
+    "@types/emscripten": "^1.39.5"
+  }
 }
