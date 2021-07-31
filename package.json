@@ -11,5 +11,13 @@
     "hearts"
   ],
   "author": "jim@play-hearts.online",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/play-hearts/hearts_wasm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/play-hearts/hearts_wasm/issues"
+  },
+  "homepage": "https://github.com/play-hearts/hearts_wasm#readme"
 }
