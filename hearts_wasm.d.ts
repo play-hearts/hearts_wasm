@@ -1,1 +1,2 @@
-export const hearts_wasm: EmscriptenModuleFactory
+declare const hearts_wasm: EmscriptenModuleFactory
+export default hearts_wasm
