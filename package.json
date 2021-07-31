@@ -1,0 +1,15 @@
+{
+  "name": "hearts_wasm",
+  "version": "1.0.0",
+  "description": "An API for the card game hearts",
+  "main": "hearts_wasm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wasm",
+    "hearts"
+  ],
+  "author": "jim@play-hearts.online",
+  "license": "ISC"
+}
