@@ -9,10 +9,10 @@ declare module 'hearts_wasm' {
 
     export class Suit {
         constructor()
-        public static CLUBS: number = 0;
-        public static DIAMS: number = 1;
-        public static HEARTS: number = 2;
-        public static SPADES: number = 3;
+        public static CLUBS: number;
+        public static DIAMS: number;
+        public static HEARTS: number;
+        public static SPADES: number;
     }
 
     export function NameOf(card: Card) : string;
@@ -33,36 +33,36 @@ declare module 'hearts_wasm' {
         get: (i: number) => Unsigned;
     }
 
-    export class CardSet extends Deletable {
+    export class CardSet implements Deletable {
         asCardVector() : CardVector
     }
 
-    export class Deal extends Deletable {
+    export class Deal implements Deletable {
 
     }
-    export class GameState extends Deletable {
+    export class GameState implements Deletable {
     }
 
-    export class VariantOptions extends Deletable {
+    export class VariantOptions implements Deletable {
 
     }
 
-    export class KnowableState extends Deletable {
+    export class KnowableState implements Deletable {
         static getInputRepOptions: (string) => VariantOptions;
         asTensor: (options: VariantOptions) => Tenzor;
     }
 
-    export class GameOutcome extends Deletable {
+    export class GameOutcome implements Deletable {
 
     }
 
-    export class GameRunner extends Deletable {
+    export class GameRunner implements Deletable {
         startGame: () => KnowableState;
         next: (play: Card) => KnowableState;
         outcome: () => GameOutcome;
     }
 
-    export class Tenzor extends Deletable {
+    export class Tenzor implements Deletable {
         shape: () => Shape;
         vec: () => FloatVector;
         at3: (i: number, j: number, k: number) => Float;
