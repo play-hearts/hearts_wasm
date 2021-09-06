@@ -1,3 +1,5 @@
+
+import type { EmscriptenModule, EmscriptenModuleFactory } from 'emscripten'
 declare module 'hearts_wasm' {
     export interface Deletable {
         delete: () => null;
@@ -35,41 +37,47 @@ declare module 'hearts_wasm' {
 
     export class CardSet implements Deletable {
         asCardVector() : CardVector
+        delete: () => null;
     }
 
     export class Deal implements Deletable {
-
+        delete: () => null;
     }
     export class GameState implements Deletable {
+        delete: () => null;
     }
 
     export class VariantOptions implements Deletable {
-
+        delete: () => null;
     }
 
     export class KnowableState implements Deletable {
         static getInputRepOptions: (string) => VariantOptions;
         asTensor: (options: VariantOptions) => Tenzor;
+        delete: () => null;
     }
 
     export class GameOutcome implements Deletable {
-
+        delete: () => null;
     }
 
     export class GameRunner implements Deletable {
         startGame: () => KnowableState;
         next: (play: Card) => KnowableState;
         outcome: () => GameOutcome;
+        delete: () => null;
     }
 
     export class Tenzor implements Deletable {
         shape: () => Shape;
         vec: () => FloatVector;
         at3: (i: number, j: number, k: number) => Float;
+        delete: () => null;
     }
 
     export class Shape extends Deletable {
         vec: () => UnsignedVector;
+        delete: () => null;
     }
 
     export interface HeartsModule extends EmscriptenModule {
@@ -82,7 +90,6 @@ declare module 'hearts_wasm' {
 
     declare const hearts_wasm: EmscriptenModuleFactory<HeartsModule>
     export default hearts_wasm
-
 }
 
 export = hearts_wasm; // make it a module
